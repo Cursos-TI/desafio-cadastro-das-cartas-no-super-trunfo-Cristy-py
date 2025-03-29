@@ -1,22 +1,116 @@
-#include <stdio.h>
+//ENTREGA DE TRABALHO
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
 
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
-    return 0;
+//Estado (char)
+//Codigo da carta (char[])
+//População (int)
+//Area em km² (Float)
+//PIB (float)
+//Numero de pontos turisticos (int)
+
+//Seja bem vindo, este jogo possue somente duas castartas 1 e 2
+
+
+# include <stdio.h>
+int main(){
+
+
+   char estado [50];
+   char nome [100];
+   int populacao, pontos, codigo; 
+   float area, pib;
+
+    printf("Seja Bem Vindo(a) JOGADOR 1\n\n");
+    printf("PARA VER AS REGRAS DO JOGO.\n\nDigite aqui seu Nome:");
+    scanf("%s", &nome );
+
+    printf("ESTE JOGO SO POSSUE DUAS CARTAS, VOCE DEVE RESPONDER OS COMANDOS BASEADO EM CIDADES! \n\n## BOA SORTE! %s \n\n" , nome);
+
+
+    // Criando carta 1
+
+
+
+   printf ("Digite o Nome do Seu Estado favorito:\n");
+   scanf ("%s", &estado);
+
+   printf ("Digite o Codigo Postal:\n");
+   scanf ("%d", &codigo);
+
+   printf ("Digite a Quantidade Populacional:\n");
+   scanf ("%d", &populacao);
+
+   printf ("Digite Numero de Pontos Turisticos:\n");
+   scanf ("%d", &pontos);
+
+   printf ("Digite a Area em km:\n");
+   scanf ("%f", &area);
+
+   printf ("Digite o PIB\n");
+   scanf ("%f", &pib);
+
+   printf("\n\n ##RESULTADO JOGADOR 1:\n\n");
+   
+
+   printf(" - O SEU ESTADO: %s - COD POSTAL : %d\n - NUMERO POPULACIONAL: %d - TOTAL DE PONTOS TURISTICOS %d\n - AREA TOTAL : %f - PIB DE : %f\n\n",estado, codigo, populacao, pontos, area, pib);
+
+
+   // criando carta 2
+
+
+
+   printf("Ola, Seja Bem Vindo(a) JOAGADOR 2\n\n");
+   printf("Digite seu nome:");
+   scanf("%s", nome);
+
+   printf("## VOCE JA SABE AS REGRAS, %s , Entao agora e sua vez, BOA SORTE!\n\n", nome);
+
+
+   printf ("Digite o Nome do Seu Estado favorito:\n");
+   scanf ("%s", &estado);
+
+   printf ("Digite o Codigo Postal:\n");
+   scanf ("%d", &codigo);
+
+   printf ("Digite a Quantidade Populacional:\n");
+   scanf ("%d", &populacao);
+
+   printf ("Digite Numero de Pontos Turisticos:\n");
+   scanf ("%d", &pontos);
+
+   printf ("Digite a Area em km:\n");
+   scanf ("%f", &area);
+
+   printf ("Digite o PIB\n");
+   scanf ("%f", &pib);
+
+   printf("\n\n ##RESULTADO JOGADOR 2:\n\n");
+   
+
+   printf(" - O SEU ESTADO: %s - COD POSTAL : %d\n - NUMERO POPULACIONAL: %d - TOTAL DE PONTOS TURISTICOS %d\n - AREA TOTAL : %f - PIB DE : %f\n\n",estado, codigo, populacao, pontos, area, pib);
+
+   // mensagem final 
+
+   printf("## ESTE JOGO E APENAS UMA DEMO ##\n\n E ACABA AQUI, PARA SABER O RESULTADO: \n\n -VOCES DEVEM CALCULAR A SOMA DOS VALORES NUMERICOS,\n -QUEM TIVER A MAIOR SOMA.\n\n ## GANHA!! ##");
+
+
+
+
+
+
+
+
+
+
+
+   return 0;
+
+
+
+
+
+
+
+
 }
