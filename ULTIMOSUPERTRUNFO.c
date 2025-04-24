@@ -22,6 +22,7 @@ int main() {
    float densidade1, densidade2;
    float area1,area2, pib1, pib2;
    float pibpercapita1, pibpercapita2;
+  
 
     printf("Seja Bem Vindo(a) JOGADOR 1\n\n");
     printf("PARA VER AS REGRAS DO JOGO.\n\nDigite aqui seu Nome:");
@@ -133,7 +134,7 @@ int main() {
 
        densidade1 =  (populacao1 + area1) /2 ;
        pibpercapita1 = (pib1 + populacao1) /2 ;
-       printf("A MEDIA, DA SUA CARTA #DENCIDADE POPULACIONAL# E : %.2f\nA MEDIA, DA SUA CARTA #RIQUEZA# E : %.2f\n\n", densidade1, pibpercapita1);
+       printf("A MEDIA, DA SUA CARTA #DENSIDADE POPULACIONAL# E : %.2f\nA MEDIA, DA SUA CARTA #RIQUEZA# E : %.2f\n\n", densidade1, pibpercapita1);
        
        
        
@@ -141,12 +142,87 @@ int main() {
 
        densidade2 =  (populacao2 + area2) /2 ;
        pibpercapita2 = (pib2  + populacao2) /2 ;
-       printf("A MEDIA, DA SUA CARTA #DENCIDADE POPULACIONAL# E : %.2f\nA MEDIA, DA SUA CARTA #RIQUEZA# E : %.2f\n\n", densidade2, pibpercapita2);
+       printf("A MEDIA, DA SUA CARTA #DENSIDADE POPULACIONAL# E : %.2f\nA MEDIA, DA SUA CARTA #RIQUEZA# E : %.2f\n\n", densidade2, pibpercapita2);
    
-  
-
 
   
+
+ // CARTA SUPER PODER CARTA 1
+ // POPULACAO+AREA+PIBPER+DENSIDADE INVERTIDA PARA COMPARAÇÃO + PONTOS
+ float superpoder1;
+ float superpoder2;
+
+ superpoder1 = populacao1 + area1+ pib1 + pibpercapita1 + 1/ densidade1 + pontos1;
+ printf("O VALOR DO SEU ##SUPER PODER1## E:%.2f\n\n",superpoder1); 
+
+//CARTA SUPER PODER 2
+
+superpoder2 = populacao2 + area2+ pib2 + pibpercapita2 + 1/ densidade2 + pontos2;
+ printf("O VALOR DO SEU ##SUPER PODER2## E:%.2f\n\n",superpoder2); 
+
+
+// INSERINDO VERDADEIRO OU FALSO 
+//IF ELSE CARTA1 DENSIDADE POPULACIONAL(CARTA COM MENOR VALOR VENCE) ECQUACAO: POPULACAO/AREA
+// COLOCAR MENSAGEM DE COMPARACAO 
+
+printf("R E S U L T A D O S   F I N A I S !\n\n\n");
+
+
+
+float resultadodensidade1, resultadodensidade2;
+
+resultadodensidade1 = (populacao1+area1)/2;
+resultadodensidade2 = (populacao2+area2)/2;
+
+
+if (resultadodensidade1<resultadodensidade2){
+   printf("##JOGADOR 1 VENCEU!## TEM A MENOR DENSIDADE POPULACIONAL!\n\n");
+}else{
+   printf("##JOGADOR 2 VENCEU!## TEM A MENOR DENSIDADE POPULACIONAL!\n\n");
+}
+
+
+// INSERINDO IF ELSE PIB PERCAPTA ( CARTA COM MAIOR VALOR VENCE) ECQUACAO: PIB/POPULACAO
+// COLOCAR MENSAGEM DE COMPRACAO 
+
+if (pibpercapita1>pibpercapita2) {
+   printf("##JOGADOR 1 VENCEU!## COM A MAIOR PIP PERCAPTA!!\n\n");
+}else {
+   printf("##JOGADOR 2 VENCEU!## COM A MAIOR PIP PERCAPTA!!\n\n"); 
+}
+
+// IF ELSE DE PONTOS TURISTICOS 
+
+if (pontos1+pontos2){
+   printf("##JOGADOR 1 VENCEU!## TEM MAIS PONTOS TURISTICOS!!\n\n");
+      
+}else{
+   printf("##JOGADOR 2 VENCEU!##  TEM MAIS PONTOS TURISTICOS!!\n\n\n\n");
+}
+
+
+
+// RESULTADO GERAL DE VENCEDOR DENSIDADE +PIBPERCAPTA + PONTOS TURISTICOS + SUPER PODER1+ SUPER PODER2
+
+printf("G A N H A D O R\n\n\n\n");
+
+float ganhador1, ganhador2;
+ganhador1 = pibpercapita1 + pontos1 + superpoder1 + resultadodensidade1;
+ganhador2 = pibpercapita2 + pontos2 + superpoder2 + resultadodensidade2;
+
+if (ganhador1>ganhador2){
+   printf("PARABENS JOGADOR 1 VOCE E O GANHADOR, !!%s, %s, %s\n\n",nome1, estado1, cidade1);
+}else{
+   printf("PARABENS JOGADOR 2 VOCE E O GANHADOR,!! %s, %s, %s\n\n",nome2, estado2, cidade2);
+
+}
+
+
+
+
+
+
+
 
 
 }
